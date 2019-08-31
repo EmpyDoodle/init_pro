@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ "$1" == "-q" ]; then
+  wineserver -k
+  echo "[LOG] --- Terminating Wine session"
+  exit 0
+fi
+
+echo "[LOG] --- Setting environment variables"
+export WINEPREFIX="$HOME/.wine_pro"
+export WINEARCH=win32
+cd "${0%/*}"  ## Dir of this file
+
+echo "[LOG] --- Beginning game"
+echo "[HELP] --- To quit the game, run the script with a -q argument"
+
+wine PROClient.exe
+exit 0
