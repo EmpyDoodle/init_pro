@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Please ensure you have [wine] and [winetricks] installed before beginning."
+echo "Visit [https://tecadmin.net/install-wine-on-ubuntu/] for instructions on how to achieve this."
 echo "Hit Ctrl + C to cancel this if Wine is not already installed."
 sleep 1
 echo "Hit Enter to install"
